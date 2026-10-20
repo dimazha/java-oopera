@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Theatre {
 
@@ -12,6 +11,9 @@ public class Theatre {
         Director director1 = new Director("Кристофер", "Нолан", Person.Gender.MALE, 10);
         Director director2 = new Director("Кэтрин", "Бигелоу", Person.Gender.FEMALE, 10);
 
+        MusicAuthor musicAuthor1 = new MusicAuthor("Ханс", "Циммер", Person.Gender.MALE);
+        Choreographer choreographer1 = new Choreographer("Иван", "Иванов", Person.Gender.MALE);
+
         //Задача 2
         Show show1 = new Show("Интерстеллар",
                 180,
@@ -21,27 +23,27 @@ public class Theatre {
                 120,
                 director2,
                 new ArrayList<>(),
-                "П. Чайковский",
+                musicAuthor1,
                 "Акт первый, акт второй",
-                "Иван Иванов");
+                choreographer1);
         Opera opera1 = new Opera("Призрак оперы",
                 150,
                 director1,
                 new ArrayList<>(),
-                "Х. Циммер",
+                musicAuthor1,
                 "Акт первый, акт второй, акт третий",
                 12);
 
         //Задача 3
-        show1.listOfActors.add(actor1);
-        show1.listOfActors.add(actor2);
-        show1.listOfActors.add(actor3);
+        show1.addActor(actor1);
+        show1.addActor(actor2);
+        show1.addActor(actor3);
 
-        ballet1.listOfActors.add(actor2);
-        ballet1.listOfActors.add(actor3);
+        ballet1.addActor(actor2);
+        ballet1.addActor(actor3);
 
-        opera1.listOfActors.add(actor1);
-        opera1.listOfActors.add(actor3);
+        opera1.addActor(actor1);
+        opera1.addActor(actor3);
 
         //Задача 4
         show1.printListOfActors();
