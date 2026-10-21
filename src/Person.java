@@ -3,9 +3,9 @@ public class Person {
         MALE, FEMALE
     }
 
-    String name;
-    String surname;
-    final Gender gender;
+    protected String name;
+    protected String surname;
+    protected final Gender gender;
 
     public Person(String name, String surname, Gender gender) {
         this.name = name;
